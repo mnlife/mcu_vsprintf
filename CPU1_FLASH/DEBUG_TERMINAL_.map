@@ -1,0 +1,507 @@
+******************************************************************************
+             TMS320C2000 Linker PC v18.1.2                     
+******************************************************************************
+>> Linked Sat Dec  8 11:05:00 2018
+
+OUTPUT FILE NAME:   <DEBUG_TERMINAL_.out>
+ENTRY POINT SYMBOL: "code_start"  address: 00080000
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+PAGE 0:
+  RAMM0                 000000f5   0000030b  00000000  0000030b  RWIX
+  RAMLS0                00008000   00000800  00000130  000006d0  RWIX
+  RAMLS1                00008800   00000800  00000000  00000800  RWIX
+  RAMLS2                00009000   00000800  00000000  00000800  RWIX
+  RAMLS3                00009800   00000800  00000000  00000800  RWIX
+  RAMLS4                0000a000   00000800  00000000  00000800  RWIX
+  BEGIN                 00080000   00000002  00000002  00000000  RWIX
+  FLASH_BANK0_SEC0      00080002   00000ffe  00000000  00000ffe  RWIX
+  FLASH_BANK0_SEC1      00081000   00001000  00000ffd  00000003  RWIX
+  FLASH_BANK0_SEC2      00082000   00001000  00000c98  00000368  RWIX
+  FLASH_BANK0_SEC3      00083000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC4      00084000   00001000  000004b3  00000b4d  RWIX
+  FLASH_BANK0_SEC5      00085000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC6      00086000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC7      00087000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC8      00088000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC9      00089000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC10     0008a000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC11     0008b000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC12     0008c000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC13     0008d000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC14     0008e000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC15     0008f000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC0      00090000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC1      00091000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC2      00092000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC3      00093000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC4      00094000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC5      00095000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC6      00096000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC7      00097000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC8      00098000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC9      00099000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC10     0009a000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC11     0009b000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC12     0009c000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC13     0009d000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC14     0009e000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC15     0009f000   00001000  00000000  00001000  RWIX
+  RESET                 003fffc0   00000002  00000000  00000002  RWIX
+
+PAGE 1:
+  BOOT_RSVD             00000002   000000f3  00000000  000000f3  RWIX
+  RAMM1                 00000400   00000400  00000100  00000300  RWIX
+  RAMLS5                0000a800   00000800  0000045a  000003a6  RWIX
+  RAMLS6                0000b000   00000800  00000000  00000800  RWIX
+  RAMLS7                0000b800   00000800  00000000  00000800  RWIX
+  RAMGS0                0000c000   00002000  00000000  00002000  RWIX
+  RAMGS1                0000e000   00002000  00000000  00002000  RWIX
+  RAMGS2                00010000   00002000  00000000  00002000  RWIX
+  RAMGS3                00012000   00002000  00000000  00002000  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+codestart 
+*          0    00080000    00000002     
+                  00080000    00000002     f28004x_codestartbranch.obj (codestart)
+
+.cinit     0    00081130    00000061     
+                  00081130    00000043     main.obj (.cinit)
+                  00081173    0000000e     rts2800_fpu32.lib : exit.c.obj (.cinit)
+                  00081181    00000005                       : _lock.c.obj (.cinit:__lock)
+                  00081186    00000005                       : _lock.c.obj (.cinit:__unlock)
+                  0008118b    00000004                       : memory.c.obj (.cinit)
+                  0008118f    00000002     --HOLE-- [fill = 0]
+
+.pinit     0    00081000    00000000     UNINITIALIZED
+
+.reset     0    003fffc0    00000002     DSECT
+                  003fffc0    00000002     rts2800_fpu32.lib : boot28.asm.obj (.reset)
+
+.econst    0    00084000    000004b3     
+                  00084000    00000100     vsprintf.obj (.econst:.string:__ctype)
+                  00084100    00000051     debug_terminal.obj (.econst:.string)
+                  00084151    00000001     --HOLE-- [fill = 0]
+                  00084152    00000038     flash.obj (.econst:.string)
+                  0008418a    00000037     gpio.obj (.econst:.string)
+                  000841c1    00000001     --HOLE-- [fill = 0]
+                  000841c2    00000037     sysctl.obj (.econst:.string)
+                  000841f9    00000001     --HOLE-- [fill = 0]
+                  000841fa    00000034     can.obj (.econst:.string)
+                  0008422e    00000034     fsi.obj (.econst:.string)
+                  00084262    00000034     lin.obj (.econst:.string)
+                  00084296    00000034     sci.obj (.econst:.string)
+                  000842ca    00000020     interrupt.obj (.econst:.string)
+                  000842ea    0000001f     cputimer.obj (.econst:.string)
+                  00084309    00000001     --HOLE-- [fill = 0]
+                  0008430a    0000001d     memcfg.obj (.econst:.string)
+                  00084327    00000001     --HOLE-- [fill = 0]
+                  00084328    0000001c     cmpss.obj (.econst:.string)
+                  00084344    0000001c     main.obj (.econst:.string)
+                  00084360    0000001c     pmbus.obj (.econst:.string)
+                  0008437c    0000001b     ecap.obj (.econst:.string)
+                  00084397    00000001     --HOLE-- [fill = 0]
+                  00084398    0000001b     epwm.obj (.econst:.string)
+                  000843b3    00000001     --HOLE-- [fill = 0]
+                  000843b4    0000001b     eqep.obj (.econst:.string)
+                  000843cf    00000001     --HOLE-- [fill = 0]
+                  000843d0    0000001b     sdfm.obj (.econst:.string)
+                  000843eb    00000001     --HOLE-- [fill = 0]
+                  000843ec    0000001a     adc.obj (.econst:.string)
+                  00084406    0000001a     dac.obj (.econst:.string)
+                  00084420    0000001a     dcc.obj (.econst:.string)
+                  0008443a    0000001a     dma.obj (.econst:.string)
+                  00084454    0000001a     i2c.obj (.econst:.string)
+                  0008446e    0000001a     spi.obj (.econst:.string)
+                  00084488    00000013     device.obj (.econst:.string)
+                  0008449b    00000010     vsprintf.obj (.econst:.string:_digits$1)
+                  000844ab    00000001     --HOLE-- [fill = 0]
+                  000844ac    00000007     vsprintf.obj (.econst:.string)
+
+.stack     1    00000400    00000100     UNINITIALIZED
+                  00000400    00000100     --HOLE--
+
+.esysmem   1    0000a800    00000400     UNINITIALIZED
+                  0000a800    00000001     rts2800_fpu32.lib : memory.c.obj (.esysmem)
+                  0000a801    000003ff     --HOLE--
+
+.ebss      1    0000ac00    0000005a     UNINITIALIZED
+                  0000ac00    00000038     main.obj (.ebss)
+                  0000ac38    00000008     rts2800_fpu32.lib : memory.c.obj (.ebss)
+                  0000ac40    0000000e                       : vla_alloc.c.obj (.ebss)
+                  0000ac4e    00000006                       : exit.c.obj (.ebss)
+                  0000ac54    00000002                       : _lock.c.obj (.ebss:__lock)
+                  0000ac56    00000002                       : _lock.c.obj (.ebss:__unlock)
+                  0000ac58    00000002     debug_terminal.obj (.ebss)
+
+.TI.ramfunc 
+*          0    00081000    00000130     RUN ADDR = 00008000
+                  00081000    0000012c     flash.obj (.TI.ramfunc)
+                  0008112c    00000004     sysctl.obj (.TI.ramfunc)
+
+.text.1    0    00081194    00000e6c     
+                  00081194    0000073e     vsprintf.obj (.text)
+                  000818d2    00000441     sysctl.obj (.text)
+                  00081d13    000002b6     sci.obj (.text)
+                  00081fc9    0000002c     main.obj (.text)
+                  00081ff5    00000009     rts2800_fpu32.lib : _lock.c.obj (.text)
+                  00081ffe    00000002                       : pre_init.c.obj (.text)
+
+.text.2    0    00082000    00000c98     
+                  00082000    0000028f     gpio.obj (.text)
+                  0008228f    000001d2     rts2800_fpu32.lib : memory.c.obj (.text)
+                  00082461    0000018d     interrupt.obj (.text)
+                  000825ee    00000178     rts2800_fpu32.lib : vla_alloc.c.obj (.text)
+                  00082766    0000016d     device.obj (.text)
+                  000828d3    00000107     rts2800_fpu32.lib : ll_div28.asm.obj (.text)
+                  000829da    000000dd     debug_terminal.obj (.text)
+                  00082ab7    00000088     rts2800_fpu32.lib : fs_div28.asm.obj (.text)
+                  00082b3f    00000056                       : boot28.asm.obj (.text)
+                  00082b95    0000003b     flash.obj (.text)
+                  00082bd0    00000029     rts2800_fpu32.lib : exit.c.obj (.text)
+                  00082bf9    00000024                       : cpy_tbl.c.obj (.text)
+                  00082c1d    00000022                       : i_div28.asm.obj (.text)
+                  00082c3f    0000001e                       : ll_cmp28.asm.obj (.text)
+                  00082c5d    0000001e                       : memcpy.c.obj (.text)
+                  00082c7b    00000019                       : args_main.c.obj (.text)
+                  00082c94    00000003                       : error.c.obj (.text)
+                  00082c97    00000001                       : startup.c.obj (.text)
+
+MODULE SUMMARY
+
+       Module                        code   initialized data   uninitialized data
+       ------                        ----   ----------------   ------------------
+    .\
+       main.obj                      44     95                 56                
+    +--+-----------------------------+------+------------------+--------------------+
+       Total:                        44     95                 56                
+                                                                                 
+    .\device\
+       device.obj                    365    19                 0                 
+       f28004x_codestartbranch.obj   2      0                  0                 
+    +--+-----------------------------+------+------------------+--------------------+
+       Total:                        367    19                 0                 
+                                                                                 
+    .\device\driverlib\
+       sysctl.obj                    1097   55                 0                 
+       sci.obj                       694    52                 0                 
+       flash.obj                     659    56                 0                 
+       gpio.obj                      655    55                 0                 
+       interrupt.obj                 397    32                 0                 
+       can.obj                       0      52                 0                 
+       fsi.obj                       0      52                 0                 
+       lin.obj                       0      52                 0                 
+       cputimer.obj                  0      31                 0                 
+       memcfg.obj                    0      29                 0                 
+       cmpss.obj                     0      28                 0                 
+       pmbus.obj                     0      28                 0                 
+       ecap.obj                      0      27                 0                 
+       epwm.obj                      0      27                 0                 
+       eqep.obj                      0      27                 0                 
+       sdfm.obj                      0      27                 0                 
+       adc.obj                       0      26                 0                 
+       dac.obj                       0      26                 0                 
+       dcc.obj                       0      26                 0                 
+       dma.obj                       0      26                 0                 
+       i2c.obj                       0      26                 0                 
+       spi.obj                       0      26                 0                 
+    +--+-----------------------------+------+------------------+--------------------+
+       Total:                        3502   786                0                 
+                                                                                 
+    .\super_terminal\
+       vsprintf.obj                  1854   279                0                 
+       debug_terminal.obj            221    81                 2                 
+    +--+-----------------------------+------+------------------+--------------------+
+       Total:                        2075   360                2                 
+                                                                                 
+    E:\Program Files\Ti\ccsv8\tools\compiler\ti-cgt-c2000_18.1.2.LTS\lib\rts2800_fpu32.lib
+       memory.c.obj                  466    4                  8                 
+       vla_alloc.c.obj               376    0                  14                
+       ll_div28.asm.obj              263    0                  0                 
+       fs_div28.asm.obj              136    0                  0                 
+       boot28.asm.obj                86     0                  0                 
+       exit.c.obj                    41     14                 6                 
+       cpy_tbl.c.obj                 36     0                  0                 
+       i_div28.asm.obj               34     0                  0                 
+       ll_cmp28.asm.obj              30     0                  0                 
+       memcpy.c.obj                  30     0                  0                 
+       args_main.c.obj               25     0                  0                 
+       _lock.c.obj                   9      10                 4                 
+       error.c.obj                   3      0                  0                 
+       pre_init.c.obj                2      0                  0                 
+       startup.c.obj                 1      0                  0                 
+    +--+-----------------------------+------+------------------+--------------------+
+       Total:                        1538   28                 32                
+                                                                                 
+       Heap:                         0      0                  1024              
+       Stack:                        0      0                  256               
+    +--+-----------------------------+------+------------------+--------------------+
+       Grand Total:                  7526   1288               1370              
+
+
+GLOBAL DATA SYMBOLS: SORTED BY DATA PAGE
+
+address     data page           name
+--------    ----------------    ----
+00000400      10 (00000400)     __stack
+
+0000a800     2a0 (0000a800)     __sys_memory
+
+0000ac00     2b0 (0000ac00)     _counter
+0000ac02     2b0 (0000ac00)     _cnt
+0000ac04     2b0 (0000ac00)     _timer
+0000ac06     2b0 (0000ac00)     _debug_data
+
+0000ac4e     2b1 (0000ac40)     ___TI_enable_exit_profile_output
+0000ac50     2b1 (0000ac40)     ___TI_cleanup_ptr
+0000ac52     2b1 (0000ac40)     ___TI_dtors_ptr
+0000ac54     2b1 (0000ac40)     __lock
+0000ac56     2b1 (0000ac40)     __unlock
+0000ac58     2b1 (0000ac40)     _msg
+
+00084000    2100 (00084000)     __ctype
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+page  address   name                            
+----  -------   ----                            
+abs   ffffffff  .text                           
+0     00082bd0  C$$EXIT                         
+0     00082ab7  FS$$DIV                         
+0     00082c1d  I$$DIV                          
+0     00082c2e  I$$MOD                          
+0     00082c3f  LL$$CMP                         
+0     000828d3  LL$$DIV                         
+0     0008290f  LL$$MOD                         
+0     00082c51  ULL$$CMP                        
+0     00082949  ULL$$DIV                        
+0     00082978  ULL$$MOD                        
+0     00082a4e  _DebugTerminalInit              
+0     000827ee  _Device_enableAllPeripherals    
+0     000827a8  _Device_init                    
+0     000828bc  _Device_initGPIO                
+0     000080e8  _Flash_initModule               
+0     00082bb5  _Flash_powerDown                
+0     00082060  _GPIO_getDirectionMode          
+0     00082106  _GPIO_getPadConfig              
+0     0008217c  _GPIO_getQualificationMode      
+0     0008221d  _GPIO_setAnalogMode             
+0     0008202f  _GPIO_setDirectionMode          
+0     00082080  _GPIO_setInterruptPin           
+0     000821e5  _GPIO_setMasterCore             
+0     000820b4  _GPIO_setPadConfig              
+0     00082258  _GPIO_setPinConfig              
+0     00082144  _GPIO_setQualificationMode      
+0     000821a9  _GPIO_setQualificationPeriod    
+0     000825a3  _Interrupt_disable              
+0     0008256f  _Interrupt_enable               
+0     00082512  _Interrupt_initModule           
+0     0008254f  _Interrupt_initVectorTable      
+0     00081130  _RamfuncsLoadEnd                
+abs   00000130  _RamfuncsLoadSize               
+0     00081000  _RamfuncsLoadStart              
+0     00008130  _RamfuncsRunEnd                 
+abs   00000130  _RamfuncsRunSize                
+0     00008000  _RamfuncsRunStart               
+0     00081f83  _SCI_clearInterruptStatus       
+0     00081eee  _SCI_disableInterrupt           
+0     00081eaa  _SCI_enableInterrupt            
+0     00081f34  _SCI_getInterruptStatus         
+0     00081e6f  _SCI_readCharArray              
+0     00081df0  _SCI_setConfig                  
+0     00081e2e  _SCI_writeCharArray             
+0     0000812c  _SysCtl_delay                   
+0     00081a4f  _SysCtl_getClock                
+0     00081c11  _SysCtl_getDeviceParametric     
+0     00081bf7  _SysCtl_getLowSpeedClock        
+0     00081c6c  _SysCtl_isPLLValid              
+0     00081ba1  _SysCtl_selectOscSource         
+0     00081b63  _SysCtl_selectXTAL              
+0     00081b87  _SysCtl_selectXTALSingleEnded   
+0     00081abd  _SysCtl_setClock                
+1     00000500  __STACK_END                     
+abs   00000100  __STACK_SIZE                    
+abs   00000400  __SYSMEM_SIZE                   
+1     0000ac50  ___TI_cleanup_ptr               
+1     0000ac52  ___TI_dtors_ptr                 
+1     0000ac4e  ___TI_enable_exit_profile_output
+abs   ffffffff  ___TI_pprof_out_hndl            
+abs   ffffffff  ___TI_prof_data_size            
+abs   ffffffff  ___TI_prof_data_start           
+0     00082c94  ___abort_execution              
+abs   ffffffff  ___binit__                      
+abs   ffffffff  ___c_args__                     
+0     00081130  ___cinit__                      
+0     000828cc  ___error__                      
+abs   ffffffff  ___etext__                      
+abs   ffffffff  ___pinit__                      
+abs   ffffffff  ___text__                       
+0     00082690  ___vla_alloc                    
+0     000825ee  ___vla_dealloc                  
+0     0008263f  ___vla_dealloc_eh               
+0     00082c7b  __args_main                     
+0     00084000  __ctype                         
+1     0000ac54  __lock                          
+0     00081ffd  __nop                           
+0     00081ff9  __register_lock                 
+0     00081ff5  __register_unlock               
+1     00000400  __stack                         
+1     0000a800  __sys_memory                    
+0     00082c97  __system_post_cinit             
+0     00081ffe  __system_pre_init               
+1     0000ac56  __unlock                        
+0     00082bd0  _abort                          
+0     00082b3f  _c_int00                        
+0     0008244a  _calloc                         
+0     00082448  _chkheap                        
+1     0000ac02  _cnt                            
+0     00082bf9  _copy_in                        
+1     0000ac00  _counter                        
+1     0000ac06  _debug_data                     
+0     00082bd2  _exit                           
+0     0008228f  _free                           
+0     0008242a  _free_memory                    
+0     00081fc9  _main                           
+0     000822f8  _malloc                         
+0     00082408  _max_free                       
+0     00082c5d  _memcpy                         
+0     000822d3  _minit                          
+1     0000ac58  _msg                            
+0     000818aa  _printf                         
+0     00082aac  _puts                           
+0     00082356  _realloc                        
+1     0000ac04  _timer                          
+abs   ffffffff  binit                           
+0     00081130  cinit                           
+0     00080000  code_start                      
+abs   ffffffff  etext                           
+abs   ffffffff  pinit                           
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+page  address   name                            
+----  -------   ----                            
+0     00008000  _RamfuncsRunStart               
+0     000080e8  _Flash_initModule               
+0     0000812c  _SysCtl_delay                   
+0     00008130  _RamfuncsRunEnd                 
+0     00080000  code_start                      
+0     00081000  _RamfuncsLoadStart              
+0     00081130  _RamfuncsLoadEnd                
+0     00081130  ___cinit__                      
+0     00081130  cinit                           
+0     000818aa  _printf                         
+0     00081a4f  _SysCtl_getClock                
+0     00081abd  _SysCtl_setClock                
+0     00081b63  _SysCtl_selectXTAL              
+0     00081b87  _SysCtl_selectXTALSingleEnded   
+0     00081ba1  _SysCtl_selectOscSource         
+0     00081bf7  _SysCtl_getLowSpeedClock        
+0     00081c11  _SysCtl_getDeviceParametric     
+0     00081c6c  _SysCtl_isPLLValid              
+0     00081df0  _SCI_setConfig                  
+0     00081e2e  _SCI_writeCharArray             
+0     00081e6f  _SCI_readCharArray              
+0     00081eaa  _SCI_enableInterrupt            
+0     00081eee  _SCI_disableInterrupt           
+0     00081f34  _SCI_getInterruptStatus         
+0     00081f83  _SCI_clearInterruptStatus       
+0     00081fc9  _main                           
+0     00081ff5  __register_unlock               
+0     00081ff9  __register_lock                 
+0     00081ffd  __nop                           
+0     00081ffe  __system_pre_init               
+0     0008202f  _GPIO_setDirectionMode          
+0     00082060  _GPIO_getDirectionMode          
+0     00082080  _GPIO_setInterruptPin           
+0     000820b4  _GPIO_setPadConfig              
+0     00082106  _GPIO_getPadConfig              
+0     00082144  _GPIO_setQualificationMode      
+0     0008217c  _GPIO_getQualificationMode      
+0     000821a9  _GPIO_setQualificationPeriod    
+0     000821e5  _GPIO_setMasterCore             
+0     0008221d  _GPIO_setAnalogMode             
+0     00082258  _GPIO_setPinConfig              
+0     0008228f  _free                           
+0     000822d3  _minit                          
+0     000822f8  _malloc                         
+0     00082356  _realloc                        
+0     00082408  _max_free                       
+0     0008242a  _free_memory                    
+0     00082448  _chkheap                        
+0     0008244a  _calloc                         
+0     00082512  _Interrupt_initModule           
+0     0008254f  _Interrupt_initVectorTable      
+0     0008256f  _Interrupt_enable               
+0     000825a3  _Interrupt_disable              
+0     000825ee  ___vla_dealloc                  
+0     0008263f  ___vla_dealloc_eh               
+0     00082690  ___vla_alloc                    
+0     000827a8  _Device_init                    
+0     000827ee  _Device_enableAllPeripherals    
+0     000828bc  _Device_initGPIO                
+0     000828cc  ___error__                      
+0     000828d3  LL$$DIV                         
+0     0008290f  LL$$MOD                         
+0     00082949  ULL$$DIV                        
+0     00082978  ULL$$MOD                        
+0     00082a4e  _DebugTerminalInit              
+0     00082aac  _puts                           
+0     00082ab7  FS$$DIV                         
+0     00082b3f  _c_int00                        
+0     00082bb5  _Flash_powerDown                
+0     00082bd0  C$$EXIT                         
+0     00082bd0  _abort                          
+0     00082bd2  _exit                           
+0     00082bf9  _copy_in                        
+0     00082c1d  I$$DIV                          
+0     00082c2e  I$$MOD                          
+0     00082c3f  LL$$CMP                         
+0     00082c51  ULL$$CMP                        
+0     00082c5d  _memcpy                         
+0     00082c7b  __args_main                     
+0     00082c94  ___abort_execution              
+0     00082c97  __system_post_cinit             
+0     00084000  __ctype                         
+1     00000400  __stack                         
+1     00000500  __STACK_END                     
+1     0000a800  __sys_memory                    
+1     0000ac00  _counter                        
+1     0000ac02  _cnt                            
+1     0000ac04  _timer                          
+1     0000ac06  _debug_data                     
+1     0000ac4e  ___TI_enable_exit_profile_output
+1     0000ac50  ___TI_cleanup_ptr               
+1     0000ac52  ___TI_dtors_ptr                 
+1     0000ac54  __lock                          
+1     0000ac56  __unlock                        
+1     0000ac58  _msg                            
+abs   00000100  __STACK_SIZE                    
+abs   00000130  _RamfuncsLoadSize               
+abs   00000130  _RamfuncsRunSize                
+abs   00000400  __SYSMEM_SIZE                   
+abs   ffffffff  .text                           
+abs   ffffffff  ___TI_pprof_out_hndl            
+abs   ffffffff  ___TI_prof_data_size            
+abs   ffffffff  ___TI_prof_data_start           
+abs   ffffffff  ___binit__                      
+abs   ffffffff  ___c_args__                     
+abs   ffffffff  ___etext__                      
+abs   ffffffff  ___pinit__                      
+abs   ffffffff  ___text__                       
+abs   ffffffff  binit                           
+abs   ffffffff  etext                           
+abs   ffffffff  pinit                           
+
+[111 symbols]

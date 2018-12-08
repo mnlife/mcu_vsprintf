@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?ccsproject version="1.0"?>
+<projectOptions>
+	<ccsVersion value="8.1.0"/>
+	<deviceVariant value="TMS320C28XX.TMS320F280049M"/>
+	<deviceFamily value="C2000"/>
+	<deviceEndianness value="little"/>
+	<codegenToolVersion value="18.1.2.LTS"/>
+	<isElfFormat value="false"/>
+	<connection value="common/targetdb/connections/TIXDS100v3_Dot7_Connection.xml"/>
+	<rts value="libc.a"/>
+	<createSlaveProjects value=""/>
+	<templateProperties value="id=sci_ex3_interrupts_fifo.projectspec.sci_ex3_interrupts_fifo"/>
+	<origin value="E:\Program Files\Ti\c2000\C2000Ware_1_00_06_00\driverlib\f28004x\examples\sci\CCS\sci_ex3_interrupts_fifo.projectspec"/>
+	<filesToOpen value=""/>
+	<isTargetManual value="false"/>
+</projectOptions>
